@@ -1,0 +1,1 @@
+# suika-2048-hosted
