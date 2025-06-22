@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suika 2048</title>
+    <link rel="icon" type="image/png" href="themes/fruits/watermelon-256x256.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav style="display: flex; justify-content: space-between; align-items: center; padding: 10px 5vw 0 5vw;">
+        <h1 style="margin: 0;">Suika 2048</h1>
+        <button id="dark-mode-toggle" type="button" aria-label="Toggle dark mode" style="margin-left: 20px;">🌙 Dark Mode</button>
+    </nav>
+    <hr>
+    <div class="main-container">
+        <aside id="side-menu">
+            <h3>Board Size</h3>
+            <div id="board-size-select">
+                <label><input type="radio" name="board-size" value="4" checked> 4x4</label>
+                <label><input type="radio" name="board-size" value="5"> 5x5</label>
+                <label><input type="radio" name="board-size" value="6"> 6x6</label>
+            </div>
+            <h3>Themes</h3>
+            <div class="current-theme-container">
+                <span>Current: </span>
+                <span id="current-theme">Ocean</span>
+            </div>
+            <div id="theme-buttons">
+                <p>Loading themes...</p>
+            </div>
+        </aside>
+        <section>
+            <h2>Score: <span id="score">0</span></h2>
+            <div id="game-board"></div>
+            <p id="message"></p>
+            <button onclick="startGame()">Restart</button>
+        </section>
+    </div>
+    <script src="themes.js"></script>
+    <script src="game.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
